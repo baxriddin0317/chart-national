@@ -15,18 +15,20 @@ import Contact from "./components/Contact";
 import "aos/dist/aos.css";
 
 function App() {
+
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
-      once: true,
       offset: 50,
       delay: 300,
       duration: 400
     });
   }, []);
+  
   useEffect(() => {
     AOS.refresh();
   }, []);
+
   return (
     <>
       {/* header start */}
