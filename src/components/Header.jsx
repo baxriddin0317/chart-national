@@ -109,21 +109,20 @@ const Header = () => {
               fixed ? "text-brand-black" : "text-white/50"
             } flex flex-col font-semibold text-xs uppercase whitespace-nowrap pt-5`}>
             {navigation.map((link) => (
-              <Link
+              <LinkRull
                 key={link.id}
                 to={link.href}
-                className="inline-block hover:text-brand-primary px-4 py-2.5">
-                <LinkRull
-                  to={link.href}
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={1000}
-                  onClick={() => setIsActive(!isActive)}
-                  className="w-full">
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={1000}
+                onClick={() => setIsActive(!isActive)}
+                className="inline-block hover:text-brand-primary cursor-pointer px-4 py-2.5">
+                <Link
+                  to={link.href}>
                   {link.name}
-                </LinkRull>
-              </Link>
+                </Link>
+              </LinkRull>
             ))}
             <Link
               to="https://dynamo.dynamosoftware.com/tenant/d7.dynamosoftware.com/chart_national"
