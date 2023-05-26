@@ -3,6 +3,7 @@ import { FaKey } from "react-icons/fa";
 import { IoIosMenu } from "react-icons/io";
 import { navigation } from "../lib/data";
 import { Link } from "react-router-dom";
+import { Link as LinkRull } from "react-scroll";
 
 const Header = () => {
   const [fixed, setFixed] = useState(false);
@@ -41,17 +42,24 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* site logo */}
           <Link to="/" className="flex items-center gap-x-1.5">
-            <img
-              className="w-14"
-              src={require("../assets/img/logo.png")}
-              alt="logo"
-            />
-            <span
-              className={`${
-                fixed ? "text-brand-black" : "text-white"
-              } block text-xl capitalize whitespace-nowrap`}>
-              Chart National L.P.
-            </span>
+            <LinkRull
+              to="/"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}>
+              <img
+                className="w-14"
+                src={require("../assets/img/logo.png")}
+                alt="logo"
+              />
+              <span
+                className={`${
+                  fixed ? "text-brand-black" : "text-white"
+                } block text-xl capitalize whitespace-nowrap`}>
+                Chart National L.P.
+              </span>
+            </LinkRull>
           </Link>
           {/* navigation */}
           <div
@@ -63,7 +71,14 @@ const Header = () => {
                 key={link.id}
                 to={link.href}
                 className="hover:text-brand-primary px-2.5 xl:px-4">
-                {link.name}
+                <LinkRull
+                  to={link.href}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}>
+                  {link.name}
+                </LinkRull>
               </Link>
             ))}
             <Link
@@ -97,9 +112,17 @@ const Header = () => {
               <Link
                 key={link.id}
                 to={link.href}
-                className="inline-block hover:text-brand-primary px-4 py-2.5"
-                onClick={() => setIsActive(!isActive)}>
-                {link.name}
+                className="inline-block hover:text-brand-primary px-4 py-2.5">
+                <LinkRull
+                  to={link.href}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={1000}
+                  onClick={() => setIsActive(!isActive)}
+                  className="w-full">
+                  {link.name}
+                </LinkRull>
               </Link>
             ))}
             <Link
