@@ -6,10 +6,10 @@ const Hero = () => {
     // hero section
     <section
       id="home"
-      className="relativ flex items-center justify-center bg-no-repeat bg-cover bg-fixed h-screen"
+      className="relativ flex items-center justify-center bg-no-repeat bg-cover bg-center w-full overflow-hidden bg-fixed h-screen"
       style={{ backgroundImage: `url(${coverdom})` }}>
         {/* black window for bg */}
-      <div className="absolute bg-black/70 w-full h-full left-0 top-0"></div>
+      <div className="absolute bg-black/70 w-full h-screen left-0 top-0"></div>
       {/* hero contents */}
       <div
         data-aos="zoom-in"
