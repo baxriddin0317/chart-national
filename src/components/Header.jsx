@@ -41,13 +41,14 @@ const Header = () => {
       <nav className="max-w-6xl px-5 mx-auto">
         <div className="flex items-center justify-between">
           {/* site logo */}
-          <Link to="/" className="flex items-center gap-x-1.5">
+          <Link to="/">
             <LinkRull
-              to="/"
+              to="home"
               spy={true}
               smooth={true}
               offset={50}
-              duration={500}>
+              duration={500}
+              className="flex items-center gap-x-1.5">
               <img
                 className="w-14"
                 src={require("../assets/img/logo.png")}
@@ -118,10 +119,7 @@ const Header = () => {
                 duration={1000}
                 onClick={() => setIsActive(!isActive)}
                 className="inline-block hover:text-brand-primary cursor-pointer px-4 py-2.5">
-                <Link
-                  to={link.href}>
-                  {link.name}
-                </Link>
+                <Link to={link.href}>{link.name}</Link>
               </LinkRull>
             ))}
             <Link

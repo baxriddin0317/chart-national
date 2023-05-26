@@ -5,8 +5,9 @@ const About = () => {
   return (
     // about us
     <section id="about" className="max-w-6xl mx-auto px-4 md:px-5 py-16">
+      {/* about title */}
       <Title title="about us" />
-
+      {/* about content */}
       <div className="grid md:grid-cols-2">
         <p data-aos="fade-right" className="px-4 mb-8">
           Chart National is a private investment fund with an investment focus

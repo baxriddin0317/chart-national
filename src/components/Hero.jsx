@@ -8,11 +8,13 @@ const Hero = () => {
       id="home"
       className="relativ flex items-center justify-center bg-no-repeat bg-cover bg-fixed h-screen"
       style={{ backgroundImage: `url(${coverdom})` }}>
+        {/* black window for bg */}
       <div className="absolute bg-black/70 w-full h-full left-0 top-0"></div>
-      {/* <img className='absolute w-full h-full -z-20' src={coverdom} alt="" /> */}
+      {/* hero contents */}
       <div
         data-aos="zoom-in"
         className="max-w-6xl mx-auto text-center text-white px-4 md:px-5 z-10 space-y-4 md:space-y-8">
+        {/* title */}
         <h1 className="font-semibold text-4xl md:text-5xl lg:text-6.5xl capitalize">
           chart national L.P
         </h1>

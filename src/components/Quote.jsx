@@ -13,11 +13,13 @@ import { Autoplay, Pagination } from "swiper";
 const Quote = () => {
   return (
     <section className="relative bg-black/70">
+      {/* img for background */}
       <img
         className="absolute object-cover w-full h-full -z-20"
         src={require("../assets/img/bg-quote.jpg")}
         alt="quotes bg"
       />
+      {/* slider with swiper js */}
       <Swiper
         spaceBetween={30}
         autoplay={{

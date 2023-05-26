@@ -8,6 +8,7 @@ const Portifolio = () => {
   return (
     // portifolio
     <section id='portifolio' className='max-w-6xl mx-auto px-4 md:px-5 py-16'>
+      {/* portifolio title */}
       <Title title="Portfolio Companies" />
 
       {/* portifolio cards */}

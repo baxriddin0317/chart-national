@@ -7,7 +7,9 @@ const Investment = () => {
     // Investment
     <section id="profile" className="bg-brand-gray text-center py-16">
       <div className="max-w-6xl mx-auto px-4 md:px-5">
+        {/* investment title */}
         <Title title="Investment profile" />
+        {/* investment text */}
         <p data-aos="fade-up" className="text-brand-zinc mb-8">
           Chart National seeks to make control equity investments in lower
           middle market companies in the Defense, Security and Intelligence
