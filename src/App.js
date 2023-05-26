@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import AOS from "aos";
+
 import About from "./components/About";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -9,7 +12,21 @@ import Title from "./components/Title";
 import TeamMember from "./components/TeamMember";
 import Contact from "./components/Contact";
 
+import "aos/dist/aos.css";
+
 function App() {
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 50,
+      delay: 300,
+      duration: 400
+    });
+  }, []);
+  useEffect(() => {
+    AOS.refresh();
+  }, []);
   return (
     <>
       {/* header start */}
@@ -28,7 +45,7 @@ function App() {
             <TeamMember key={member.id} member={member} />
           ))}
         </section>
-        {/* our team section start */}
+        {/* our team section end */}
         {/* quote section start */}
         <Quote />
         {/* quote section end */}

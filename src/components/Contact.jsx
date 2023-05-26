@@ -6,7 +6,7 @@ const Contact = () => {
     // contact section
     <section id="contact" className='pt-16 pb-20'>
       <Title title="contact us" />
-      <div className='max-w-6xl mx-auto px-4 lg:px-5 flex flex-col lg:flex-row items-center lg:items-start justify-between'>
+      <div data-aos="fade-up" className='max-w-6xl mx-auto px-4 lg:px-5 flex flex-col lg:flex-row items-center lg:items-start justify-between'>
         <div className='flex flex-col md:flex-row lg:flex-col items-start justify-around w-full lg:w-auto gap-x-6'>
           <h2 className='text-2xl text-brand-zinc font-medium mb-2 whitespace-nowrap'>
           New York Office

@@ -8,7 +8,7 @@ const Hero = () => {
       <div className='absolute w-full h-full left-0 top-0 bg-black/70'>
       </div>
       {/* <img className='absolute w-full h-full -z-20' src={coverdom} alt="" /> */}
-      <div className='max-w-6xl mx-auto text-center text-white px-4 md:px-5 z-10'>
+      <div data-aos="zoom-in" className='max-w-6xl mx-auto text-center text-white px-4 md:px-5 z-10'>
         <h1 className='text-4xl md:text-5xl lg:text-6.5xl font-semibold mb-4 md:mb-8 capitalize'>
           chart national L.P
         </h1>

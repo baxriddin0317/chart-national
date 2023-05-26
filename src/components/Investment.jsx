@@ -8,14 +8,14 @@ const Investment = () => {
     <section id="profile" className="bg-brand-gray text-center py-16">
       <div className="max-w-6xl mx-auto px-4 md:px-5">
         <Title title="Investment profile" />
-        <p className="text-brand-zinc mb-8">
+        <p data-aos="fade-up" className="text-brand-zinc mb-8">
           Chart National seeks to make control equity investments in lower
           middle market companies in the Defense, Security and Intelligence
           sector, focused on priority/high-growth budget areas, driving value
           primarily through organic growth but augmented by targeted acquisition
           growth when appropriate.
         </p>
-        <p className="text-brand-zinc mb-8">
+        <p data-aos="fade-up" className="text-brand-zinc mb-8">
           Our targeted portfolio companies exhibit most, if not all, of the
           following attributes:
         </p>
@@ -32,7 +32,7 @@ const Investment = () => {
 
 const Card = ({data}) => {
   return (
-    <div className="px-4">
+    <div data-aos="fade-up" className="px-4">
       <div className="flex items-center justify-center text-white text-2xl w-12 h-12 mx-auto rounded-full bg-brand-primary mb-3.5">
         {data.icon}
       </div>

@@ -32,7 +32,7 @@ const Quote = () => {
         className="mySwiper">
         {quotes.map((quote, i) => (
           <SwiperSlide key={i}>
-            <div className="max-w-6xl mx-auto px-4 md:px-5 py-16 text-center">
+            <div data-aos="fade-up" className="max-w-6xl mx-auto px-4 md:px-5 py-16 text-center">
               <p className="text-white md:text-lg lg:text-xl mb-5">
                 <FaQuoteLeft className="inline-block mr-4" />
                 {quote.text}
