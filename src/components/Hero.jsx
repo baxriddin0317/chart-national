@@ -6,7 +6,7 @@ const Hero = () => {
     // hero section
     <section
       id="home"
-      className="relativ flex items-center justify-center bg-no-repeat bg-cover bg-center w-full overflow-hidden bg-fixed h-screen before:absolute before:bg-black/70 before:w-full before:h-screen before:left-0 before:top-0"
+      className="relativ flex items-center justify-center bg-no-repeat bg-cover bg-center bg-fixed bg-blend-overlay bg-black/70 h-screen"
       style={{ backgroundImage: `url(${coverdom})` }}>
       {/* hero contents */}
       <div
