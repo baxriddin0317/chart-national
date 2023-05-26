@@ -50,7 +50,7 @@ const Header = () => {
               duration={500}
               className="flex items-center gap-x-1.5">
               <img
-                className="w-14"
+                className={`${fixed ? 'mix-blend-difference' : ''} w-14`}
                 src={require("../assets/img/logo.png")}
                 alt="logo"
               />
