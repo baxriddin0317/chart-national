@@ -66,17 +66,17 @@ const Header = () => {
           <div
             className={`${
               fixed ? "text-brand-black" : "text-white/50"
-            } hidden lg:flex items-center font-semibold text-xs uppercase whitespace-nowrap py-1.5`}>
+            } hidden lg:flex items-center font-semibold text-xs uppercase whitespace-nowrap gap-x-5 xl:gap-x-8 py-1.5 nav-link`}>
             {navigation.map((link) => (
               <Link
                 key={link.id}
                 to={link.href}
-                className="hover:text-brand-primary px-2.5 xl:px-4">
+                className="hover:text-brand-primary">
                 <LinkRull
                   to={link.href}
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={-300}
                   duration={500}>
                   {link.name}
                 </LinkRull>
@@ -84,7 +84,7 @@ const Header = () => {
             ))}
             <Link
               to="https://dynamo.dynamosoftware.com/tenant/d7.dynamosoftware.com/chart_national"
-              className="flex items-center gap-x-px hover:text-brand-primary px-2.5 xl:px-4">
+              className="flex items-center gap-x-px hover:text-brand-primary">
               <FaKey />
               <span>lp login</span>
             </Link>
@@ -108,7 +108,7 @@ const Header = () => {
             ref={ref}
             className={`${
               fixed ? "text-brand-black" : "text-white/50"
-            } flex flex-col font-semibold text-xs uppercase whitespace-nowrap pt-5`}>
+            } flex flex-col font-semibold text-xs uppercase whitespace-nowrap gap-y-5 px-4 pt-5 nav-link`}>
             {navigation.map((link) => (
               <LinkRull
                 key={link.id}
@@ -118,13 +118,13 @@ const Header = () => {
                 offset={-100}
                 duration={1000}
                 onClick={() => setIsActive(!isActive)}
-                className="inline-block hover:text-brand-primary cursor-pointer px-4 py-2.5">
+                className="inline-block hover:text-brand-primary cursor-pointer">
                 <Link to={link.href}>{link.name}</Link>
               </LinkRull>
             ))}
             <Link
               to="https://dynamo.dynamosoftware.com/tenant/d7.dynamosoftware.com/chart_national"
-              className="flex items-center gap-x-px hover:text-brand-primary px-4 py-2.5"
+              className="flex items-center gap-x-px hover:text-brand-primary"
               onClick={() => setIsActive(!isActive)}>
               <FaKey />
               <span>lp login</span>

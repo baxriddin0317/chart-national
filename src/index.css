@@ -13,7 +13,9 @@
     @apply font-open-sans
   }
 
-  
+}
+.nav-link .active {
+  @apply !text-brand-primary
 }
 
 .swiper-pagination .swiper-pagination-bullet {
