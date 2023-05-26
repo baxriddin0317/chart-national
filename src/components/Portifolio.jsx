@@ -2,7 +2,6 @@ import React from 'react'
 import Title from './Title'
 import {FaLink} from "react-icons/fa"
 import {Portifolio as Data} from "../lib/data"
-import { Link } from 'react-router-dom'
 
 const Portifolio = () => {
   return (
@@ -32,9 +31,9 @@ const PortifolioCard = ({data}) => {
       <p className='text-sm text-brand-zinc mb-4'>
       {data.text}
       </p>
-      <Link to={data.linkUrl} className='flex items-center justify-center w-10 h-10 border border-brand-gray-light text-brand-gray-light hover:text-brand-zinc hover:border-brand-zinc rounded-full' target='_blank' rel="noreferrer">
+      <a href={data.linkUrl} className='flex items-center justify-center w-10 h-10 border border-brand-gray-light text-brand-gray-light hover:text-brand-zinc hover:border-brand-zinc rounded-full' target='_blank' rel="noreferrer">
         <FaLink className="text-xl" />
-      </Link>
+      </a>
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import Title from './Title'
-import { Link } from 'react-router-dom'
 
 const Contact = () => {
   return (
@@ -28,9 +27,9 @@ const Contact = () => {
           <p className='text-brand-zinc mb-8'>
           (212) 350-8200
           <br />
-          <Link to="mailto:info@chartnational.com" className='text-brand-primary'>
+          <a href="mailto:info@chartnational.com" className='text-brand-primary'>
           info@chartnational.com
-          </Link>
+          </a>
           </p>
         </div>
         {/* map */}
