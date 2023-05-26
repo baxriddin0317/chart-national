@@ -6,10 +6,8 @@ const Hero = () => {
     // hero section
     <section
       id="home"
-      className="relativ flex items-center justify-center bg-no-repeat bg-cover bg-center w-full overflow-hidden bg-fixed h-screen"
+      className="relativ flex items-center justify-center bg-no-repeat bg-cover bg-center w-full overflow-hidden bg-fixed h-screen before:absolute before:bg-black/70 before:w-full before:h-screen before:left-0 before:top-0"
       style={{ backgroundImage: `url(${coverdom})` }}>
-        {/* black window for bg */}
-      <div className="absolute bg-black/70 w-full h-screen left-0 top-0"></div>
       {/* hero contents */}
       <div
         data-aos="zoom-in"
