@@ -63,7 +63,7 @@ function App() {
       </main>
       {/* main end */}
       {/* footer start */}
-      <footer className="bg-brand-black-medium py-10">
+      <footer className="bg-brand-black-medium py-5 md:py-10">
         <p className="text-center text-white/50">
         © Copyright Chart National L.P. 2020
         </p>
