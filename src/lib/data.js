@@ -17,37 +17,37 @@ import Bg2 from "../assets/img/bg-quote.jpg"
 export const navigation = [
   {
     id: 1,
-    href: "#home",
+    href: "home",
     name: "home",
   },
   {
     id: 2,
-    href: "#about",
+    href: "about",
     name: "about us",
   },
   {
     id: 3,
-    href: "#profile",
+    href: "profile",
     name: "investment profile",
   },
   {
     id: 4,
-    href: "#portifolio",
+    href: "portifolio",
     name: "portifolio",
   },
   {
     id: 5,
-    href: "#team",
+    href: "team",
     name: "team",
   },
   {
     id: 6,
-    href: "#board",
+    href: "board",
     name: "advisory board",
   },
   {
     id: 7,
-    href: "#contact",
+    href: "contact",
     name: "contact",
   },
 ];

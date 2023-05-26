@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaKey } from "react-icons/fa";
 import { IoIosMenu } from "react-icons/io";
 import { navigation } from "../lib/data";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [fixed, setFixed] = useState(false);
@@ -39,7 +40,7 @@ const Header = () => {
       <nav className="max-w-6xl px-5 mx-auto">
         <div className="flex items-center justify-between">
           {/* site logo */}
-          <a href="#home" className="flex items-center gap-x-1.5">
+          <Link to="home" spy={true} smooth={true} offset={-300} duration={500} className="flex items-center gap-x-1.5">
             <img
               className={`${fixed ? "mix-blend-difference" : ""} w-14`}
               src={require("../assets/img/logo.png")}
@@ -51,16 +52,16 @@ const Header = () => {
               } block text-xl capitalize whitespace-nowrap`}>
               Chart National L.P.
             </span>
-          </a>
+          </Link>
           {/* navigation */}
           <div
             className={`${
               fixed ? "text-brand-black" : "text-white/50"
             } hidden lg:flex items-center font-semibold text-xs uppercase whitespace-nowrap gap-x-5 xl:gap-x-8 py-1.5 nav-link`}>
             {navigation.map((link) => (
-              <a href={link.href} className="hover:text-brand-primary">
+              <Link to={link.href} spy={true} smooth={true} offset={-300} duration={500} className="hover:text-brand-primary cursor-pointer">
                 {link.name}
-              </a>
+              </Link>
             ))}
             <a
               href="https://dynamo.dynamosoftware.com/tenant/d7.dynamosoftware.com/chart_national"
@@ -88,18 +89,18 @@ const Header = () => {
             ref={ref}
             className={`${
               fixed ? "text-brand-black" : "text-white/50"
-            } flex flex-col font-semibold text-xs uppercase whitespace-nowrap gap-y-5 px-4 pt-5 nav-link`}>
+            } flex flex-col font-semibold text-xs uppercase whitespace-nowrap gap-y-5 px-4 pt-5 nav-link pb-3`}>
             {navigation.map((link) => (
-              <a
+              <Link to={link.href} spy={true} smooth={true} offset={-300} duration={500}
                 href={link.href}
                 onClick={() => setIsActive(!isActive)}
                 className="inline-block hover:text-brand-primary cursor-pointer">
                 {link.name}
-              </a>
+              </Link>
             ))}
             <a
               href="https://dynamo.dynamosoftware.com/tenant/d7.dynamosoftware.com/chart_national"
-              className="flex items-center gap-x-px hover:text-brand-primary"
+              className="flex items-center gap-x-px hover:text-brand-primary cursor-pointer"
               onClick={() => setIsActive(!isActive)}>
               <FaKey />
               <span>lp login</span>
