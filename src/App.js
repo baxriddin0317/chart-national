@@ -1,24 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import About from "./components/About";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Investment from "./components/Investment";
+import Quote from "./components/Quote";
+import Portifolio from "./components/Portifolio";
+import { Team, Board } from "./lib/data";
+import Title from "./components/Title";
+import TeamMember from "./components/TeamMember";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <>
+      {/* header start */}
+      <Header />
+      {/* header end */}
+      {/* main start */}
+      <main>
+        <Hero />
+        <About />
+        <Investment />
+        <Portifolio />
+        {/* our team section start */}
+        <section id="team" className="max-w-6xl mx-auto px-4 md:px-5 py-16">
+          <Title title="Our Team" />
+          {Team.map((member) => (
+            <TeamMember key={member.id} member={member} />
+          ))}
+        </section>
+        {/* our team section start */}
+        {/* quote section start */}
+        <Quote />
+        {/* quote section end */}
+        {/* Advisory Board section start */}
+        <section id="board" className="max-w-6xl mx-auto px-4 md:px-5 py-16">
+          <Title title="Advisory Board" />
+          {Board.map((member) => (
+            <TeamMember key={member.id} member={member} />
+          ))}
+        </section>
+        {/* Advisory Board section end */}
+        <Contact />
+      </main>
+      {/* main end */}
+      {/* footer start */}
+      <footer className="bg-brand-black-medium py-10">
+        <p className="text-center text-white/50">
+        © Copyright Chart National L.P. 2020
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </footer>
+      {/* footer end */}
+    </>
   );
 }
 
