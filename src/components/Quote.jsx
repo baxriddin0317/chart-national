@@ -14,7 +14,7 @@ const Quote = () => {
   return (
     <section className="relative bg-black/70">
       <img
-        className="absolute w-full h-full -z-20 object-cover"
+        className="absolute object-cover w-full h-full -z-20"
         src={require("../assets/img/bg-quote.jpg")}
         alt="quotes bg"
       />
@@ -32,7 +32,7 @@ const Quote = () => {
         className="mySwiper">
         {quotes.map((quote, i) => (
           <SwiperSlide key={i}>
-            <div data-aos="fade-up" className="max-w-6xl mx-auto px-4 md:px-5 py-16 text-center">
+            <div data-aos="fade-up" className="max-w-6xl text-center mx-auto px-4 md:px-5 py-16">
               <p className="text-white md:text-lg lg:text-xl mb-5">
                 <FaQuoteLeft className="inline-block mr-4" />
                 {quote.text}

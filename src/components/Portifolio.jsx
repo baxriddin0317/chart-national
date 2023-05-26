@@ -22,9 +22,9 @@ const Portifolio = () => {
 const PortifolioCard = ({data}) => {
   return (
     // card
-    <div data-aos="fade-up" className='text-center flex flex-col items-center justify-between px-4'>
-      <img className='h-16 md:h-20' src={data.img} alt="pportifolio card" />
-      <h1 className='font-medium text-2xl text-brand-zinc mb-1.5 capitalize'>
+    <div data-aos="fade-up" className='flex flex-col items-center justify-between text-center px-4'>
+      <img className='h-16 md:h-20' src={data.img} alt="portifolio card" />
+      <h1 className='font-medium text-2xl text-brand-zinc capitalize mb-1.5'>
         {data.title}
       </h1>
       <p className='text-sm text-brand-zinc mb-4'>

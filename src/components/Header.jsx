@@ -28,7 +28,7 @@ const Header = () => {
       };
     });
   }, []);
-  
+
   return (
     <header
       className={`${
@@ -57,12 +57,12 @@ const Header = () => {
             <ul
               className={`${
                 fixed ? "text-brand-black" : "text-white/50"
-              } hidden lg:flex items-center font-semibold text-xs uppercase py-1.5 whitespace-nowrap`}>
+              } hidden lg:flex items-center font-semibold text-xs uppercase whitespace-nowrap py-1.5`}>
               {navigation.map((link) => (
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    className="px-2.5 xl:px-4 hover:text-brand-primary">
+                    className="hover:text-brand-primary px-2.5 xl:px-4">
                     {link.name}
                   </a>
                 </li>
@@ -70,7 +70,7 @@ const Header = () => {
               <li>
                 <a
                   href="https://dynamo.dynamosoftware.com/tenant/d7.dynamosoftware.com/chart_national"
-                  className="px-2.5 xl:px-4 hover:text-brand-primary flex items-center gap-x-px">
+                  className="flex items-center gap-x-px hover:text-brand-primary px-2.5 xl:px-4">
                   <FaKey />
                   <span>lp login</span>
                 </a>
@@ -83,7 +83,7 @@ const Header = () => {
             onClick={() => setIsActive(!isActive)}
             className={`${
               fixed ? "text-black bg-black/10" : "text-white bg-white/20"
-            } lg:hidden py-2 px-2.5 rounded`}>
+            } lg:hidden rounded py-2 px-2.5`}>
             <IoIosMenu className={` text-xl`} />
           </button>
         </div>
@@ -96,12 +96,12 @@ const Header = () => {
             ref={ref}
             className={`${
               fixed ? "text-brand-black" : "text-white/50"
-            } flex flex-col font-semibold text-xs uppercase pt-5 whitespace-nowrap`}>
+            } flex flex-col font-semibold text-xs uppercase whitespace-nowrap pt-5`}>
             {navigation.map((link) => (
               <li key={link.id}>
                 <a
                   href={link.href}
-                  className="inline-block px-4 py-2.5 hover:text-brand-primary"
+                  className="inline-block hover:text-brand-primary px-4 py-2.5"
                   onClick={() => setIsActive(!isActive)}>
                   {link.name}
                 </a>
@@ -110,7 +110,7 @@ const Header = () => {
             <li>
               <a
                 href="https://dynamo.dynamosoftware.com/tenant/d7.dynamosoftware.com/chart_national"
-                className="px-4 py-2.5 hover:text-brand-primary flex items-center gap-x-px"
+                className="flex items-center gap-x-px hover:text-brand-primary px-4 py-2.5"
                 onClick={() => setIsActive(!isActive)}>
                 <FaKey />
                 <span>lp login</span>
