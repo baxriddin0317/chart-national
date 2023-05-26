@@ -10,7 +10,7 @@ const Portifolio = () => {
       <Title title="Portfolio Companies" />
 
       {/* portifolio cards */}
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 items-stretch'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 items-stretch gap-y-6'>
         {Data.map(data => (
           <PortifolioCard key={data.id} data={data} />
         ))}
@@ -24,9 +24,9 @@ const PortifolioCard = ({data}) => {
     // card
     <div data-aos="fade-up" className='flex flex-col items-center justify-between text-center px-4'>
       <img className='h-16 md:h-20' src={data.img} alt="portifolio card" />
-      <h1 className='font-medium text-2xl text-brand-zinc capitalize mb-1.5'>
+      <h3 className='font-medium text-2xl text-brand-zinc capitalize mb-1.5'>
         {data.title}
-      </h1>
+      </h3>
       <p className='text-sm text-brand-zinc mb-4'>
       {data.text}
       </p>
