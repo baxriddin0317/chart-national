@@ -40,7 +40,7 @@ const Header = () => {
       <nav className="max-w-6xl px-5 mx-auto">
         <div className="flex items-center justify-between">
           {/* site logo */}
-          <Link to="home" spy={true} smooth={true} offset={-300} duration={500} className="flex items-center gap-x-1.5">
+          <Link to="home" spy={true} smooth={true} offset={-300} duration={500} className="flex items-center gap-x-1.5 cursor-pointer">
             <img
               className={`${fixed ? "mix-blend-difference" : ""} w-14`}
               src={require("../assets/img/logo.png")}
