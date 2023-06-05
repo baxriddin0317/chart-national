@@ -36,8 +36,8 @@ const Header = () => {
         fixed
           ? "bg-white py-1.5 shadow-fixed"
           : "bg-transparent py-4 shadow-header"
-      } fixed w-full z-50 transition-all duration-300 ease-in-out`}>
-      <nav className="max-w-6xl px-5 mx-auto">
+      } ${isActive && !fixed ? '!bg-black/70' : ''} fixed w-full z-50 transition-all duration-300 ease-in-out`}>
+      <nav className="relative max-w-6xl px-5 mx-auto">
         <div className="flex items-center justify-between">
           {/* site logo */}
           <Link to="home" spy={true} smooth={true} offset={-300} duration={500} className="flex items-center gap-x-1.5 cursor-pointer">
@@ -56,10 +56,10 @@ const Header = () => {
           {/* navigation */}
           <div
             className={`${
-              fixed ? "text-brand-black" : "text-white/50"
+              fixed ? "text-brand-black" : "text-white"
             } hidden lg:flex items-center font-semibold text-xs uppercase whitespace-nowrap gap-x-5 xl:gap-x-8 py-1.5 nav-link`}>
             {navigation.map((link) => (
-              <Link to={link.href} spy={true} smooth={true} offset={-300} duration={500} className="hover:text-brand-primary cursor-pointer">
+              <Link key={link.id} to={link.href} spy={true} smooth={true} offset={-300} duration={500} className="hover:text-brand-primary cursor-pointer">
                 {link.name}
               </Link>
             ))}
@@ -83,15 +83,15 @@ const Header = () => {
 
         {/* mobile menu */}
         <div
-          className="lg:hidden overflow-hidden transition-all ease-in-out duration-500"
+          className="relative z-50 lg:hidden overflow-hidden transition-all ease-in-out duration-500"
           style={{ height: `${isActive ? `${height}px` : "0px"}` }}>
           <div
             ref={ref}
             className={`${
-              fixed ? "text-brand-black" : "text-white/50"
+              fixed ? "text-brand-black" : "text-white"
             } flex flex-col font-semibold text-xs uppercase whitespace-nowrap gap-y-5 px-4 pt-5 nav-link pb-3`}>
             {navigation.map((link) => (
-              <Link to={link.href} spy={true} smooth={true} offset={-300} duration={500}
+              <Link key={link.id} to={link.href} spy={true} smooth={true} offset={-300} duration={500}
                 href={link.href}
                 onClick={() => setIsActive(!isActive)}
                 className="inline-block hover:text-brand-primary cursor-pointer">

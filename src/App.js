@@ -29,6 +29,8 @@ function App() {
     AOS.refresh();
   }, []);
 
+  let date = new Date()
+
   return (
     <>
       {/* header start */}
@@ -65,7 +67,7 @@ function App() {
       {/* footer start */}
       <footer className="bg-brand-black-medium py-5 md:py-10">
         <p className="text-center text-white/50">
-        © Copyright Chart National L.P. 2020
+        © Copyright Chart National L.P. {date.getFullYear()}
         </p>
       </footer>
       {/* footer end */}

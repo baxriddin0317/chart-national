@@ -22,7 +22,7 @@ const Hero = () => {
         <h3 className="font-light md:text-2xl lg:text-3xl">
           Serving the Defense, Security & Intelligence Sector
         </h3>
-        <p className="text-sm md:text-lg lg:text-xl leading-6 text-white/50">
+        <p className="text-sm md:text-lg lg:text-xl leading-6 text-white">
           The Sector is the conduit for government innovation through necessity.
           Great technologies such as the internet, GPS, and Rapid DNA have come
           about because of Sector needs. In times of national stress, the Sector
